@@ -1,7 +1,7 @@
 import tkinter as tk
 from tkinter import messagebox
 
-## detalles de la ventana
+
 
 ventana = tk.Tk()
 ventana.title("Calculadora 1")
@@ -9,16 +9,11 @@ ventana.geometry("360x250")
 ventana.resizable(0, 0)
 ventana.iconbitmap("images.ico")
 
-## Contornos
-
 contorno1 = tk.LabelFrame(ventana, text = "Operaciones", font = "arial", width = 299, height = 82)
 contorno1.place(x = 24, y = 30)
 
 contorno2 = tk.LabelFrame(ventana, text = "Operadores", font = "arial", width = 299, height = 82)
 contorno2.place(x = 24, y = 138)
-
-## Operadores
-
 
 def suma():
    try:
@@ -75,7 +70,6 @@ def divi():
    except:
         messagebox.showerror("Error", "Syntax Error")
 
-##  botones de operaciones
 
 btnsuma = tk.Button(contorno2, text = "+", font = "arial", width = 5, height = 1, command = suma)
 btnsuma.place(x = 13, y = 2)
@@ -89,7 +83,6 @@ btnmulti.place(x = 147, y = 2)
 btndiv = tk.Button(contorno2, text = "/", font = "arial", width = 5, height = 1, command = divi)
 btndiv.place(x = 213, y = 2)
 
-## textbox 
 
 valor1 = tk.Entry(contorno1, font = "arial", width = 5)
 valor1.place(x = 13, y = 10)
